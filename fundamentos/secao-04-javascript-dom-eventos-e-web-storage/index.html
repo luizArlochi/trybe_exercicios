@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+      const tagH1 = document.createElement('h1');
+      tagH1.innerText = 'TrybeTrip - Agência de Viagens';
+      document.body.appendChild(tagH1);
+
+      const tagMain = document.createElement('main');
+      tagMain.className = ('main-content');
+      document.body.appendChild(tagMain);
+
+      const tagSection = document.createElement('section');
+      tagSection.className = ('center-content');
+      tagMain.appendChild(tagSection);
+
+      const tagP = document.createElement('p');
+      tagP.className = ('text');
+      tagSection.appendChild(tagP);
+
+      const leftElement = document.createElement('section');
+      leftElement.className = ('left-content');
+      tagMain.appendChild(leftElement);
+
+      const rightElement = document.createElement('section');
+      rightElement.className = ('right-content');
+      tagMain.appendChild(rightElement);
+
+      const tagImg = document.createElement('img');
+      tagImg.className = ('small-image');
+      tagImg.src = 'https://picsum.photos/200';
+      leftElement.appendChild(tagImg);
+
+      const tagUList = document.createElement('ul');
+      rightElement.appendChild(tagUList);
+      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      for (let num in array) {
+        const tagList = document.createElement('li');
+        tagList.innerText = array[num];
+        tagUList.appendChild(tagList);
+
+        for (let index = 1; index <= 3; index += 1) {
+          const tagH3 = document.createElement('h3');
+          tagH3.innerText = 'text' + index;
+          tagMain.appendChild(tagH3);
+        }
+      }
+    </script>
+  </body>
+</html>
