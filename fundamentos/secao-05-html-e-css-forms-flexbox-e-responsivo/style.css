@@ -24,6 +24,8 @@
     display: flex;
     flex-basis: 500px;
     order: 1;
+    flex-grow: 1;
+    align-self: center;
   }
   
   .menu-container ul {
@@ -48,6 +50,8 @@
   .movie-container {
     display: flex;
     flex-direction: column;
+    flex-basis: 700px;
+    flex-grow: 10;
   }
   
   .movie-container h2 {
@@ -69,12 +73,18 @@
     height: 150px;
     justify-content: center;
     margin: 10px;
+    flex-basis: 16%;
+    flex-grow: 1;
+    border-radius: 7px;
   }
   
   .aside-container {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    flex-basis: 350px;
+    flex-grow: 1;
+    align-self: center;
   }
   
   .aside-container h3, h4 {
