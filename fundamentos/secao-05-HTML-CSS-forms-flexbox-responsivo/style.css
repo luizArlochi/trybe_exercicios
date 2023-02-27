@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+  }
+
+  header p, ul {
+    padding: 10px;
+  }
+  .aside-one {
+    display: flex;
+    border: solid red;
+    width: 30%;
+    flex-flow: column nowrap;
+    padding: 10px;
+  }
+
+  .aside-two {
+    display: flex;
+    width: 40%;
+    flex-flow: column nowrap;
+    padding: 10px;
+    border: solid red;
+  }
+
+
+
+  @media screen and (min-width:600px) {
+    .container {
+
+    }
+    
+  }
+
+  @media screen and () {
+    
+  }
+
+  @media screen and () {
+    
+  }
